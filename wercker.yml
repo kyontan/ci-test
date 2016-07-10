@@ -3,23 +3,21 @@ box: ruby:2.3.0
 build:
   steps:
     - script:
+        name: check os version and env
+        code: |
+          cat /etc/issue
+          cat /proc/cpuinfo
         name: install nodejs / npm
         code: |
-          apt-get update
-          apt-get install -y nodejs
-          curl -0 -L http://npmjs.org/install.sh | sudo sh
+          curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
+          sudo apt-get install -y nodejs
     - script:
         name: set nodejs environment
         code: |
-          nodejs --version
           npm --version
-          npm install -g n
-          n stable
           nodejs --version
-          node --version
-          rm `which nodejs` && ln `which node` /usr/bin/nodejs
-          nodejs --version
-          node --version
+          which nodejs
+          which node
     # - script:
     #     name: bower install
     #     code: |
