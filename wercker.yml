@@ -13,16 +13,13 @@ build:
           nodejs --version
           npm --version
           npm install -g n npm
+          n stable
+          nodejs --version
+          node --version
+          rm `which nodejs`
+          nodejs --version
+          node --version
           npm --version
-          n stable
-          nodejs --version
-          node --version
-          n use $(n --stable) --version
-          n stable
-          nodejs --version
-          node --version
-          n use $(n --stable) --version
-          npm install
     # - script:
     #     name: bower install
     #     code: |
