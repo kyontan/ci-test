@@ -9,7 +9,7 @@ build:
           cat /proc/cpuinfo
         name: install nodejs / npm
         code: |
-          curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
+          curl -sL https://deb.nodesource.com/setup_6.x | bash -
           sudo apt-get install -y nodejs
     - script:
         name: set nodejs environment
