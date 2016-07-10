@@ -7,11 +7,11 @@ build:
         code: |
           apt-get update
           apt-get install -y nodejs
+          curl -0 -L http://npmjs.org/install.sh | sudo sh
     - script:
         name: set nodejs environment
         code: |
           nodejs --version
-          curl -0 -L http://npmjs.org/install.sh | sudo sh
           npm --version
           npm install -g n
           n stable
