@@ -8,10 +8,12 @@ build:
           apt-get update
           apt-get install -y nodejs npm
           nodejs --version
-          npm install -g n
+          npm install -g n npm
           n stable
+          ln -s `n bin stable` /usr/bin/node
           nodejs --version
-          ln -s `which nodejs` /usr/bin/node
+          n bin stable
+          `n bin stable` --version
           npm install
     - script:
         name: bower install
