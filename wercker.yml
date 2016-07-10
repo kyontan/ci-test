@@ -6,20 +6,20 @@ build:
         name: install nodejs / npm
         code: |
           apt-get update
-          apt-get install -y nodejs npm
+          apt-get install -y nodejs
     - script:
         name: set nodejs environment
         code: |
           nodejs --version
+          curl -0 -L http://npmjs.org/install.sh | sudo sh
           npm --version
-          npm install -g n npm
+          npm install -g n
           n stable
           nodejs --version
           node --version
           rm `which nodejs` && ln `which node` /usr/bin/nodejs
           nodejs --version
           node --version
-          npm --version
     # - script:
     #     name: bower install
     #     code: |
