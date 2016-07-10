@@ -16,7 +16,7 @@ build:
           n stable
           nodejs --version
           node --version
-          rm `which nodejs`
+          rm `which nodejs` && ln `which node` /usr/bin/node
           nodejs --version
           node --version
           npm --version
