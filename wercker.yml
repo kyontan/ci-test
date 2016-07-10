@@ -7,6 +7,7 @@ build:
         code: |
           cat /etc/issue
           cat /proc/cpuinfo
+    - script:
         name: install nodejs / npm
         code: |
           curl -sL https://deb.nodesource.com/setup_6.x | bash -
@@ -16,13 +17,3 @@ build:
         code: |
           npm --version
           nodejs --version
-          which nodejs
-          which node
-    # - script:
-    #     name: bower install
-    #     code: |
-    #       $(npm bin)/bower --allow-root install
-    # - script:
-    #     name: gulp build
-    #     code: |
-    #       $(npm bin)/gulp build
