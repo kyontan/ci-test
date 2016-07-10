@@ -15,11 +15,8 @@ build:
           npm install -g n npm
           npm --version
           n stable
-          n bin stable
-          ln -s `n bin stable` /usr/bin/node
-          nodejs --version
-          n bin stable
-          n bin stable --version
+          n ls
+          nodejs --version || node --version
           npm install
     - script:
         name: bower install
