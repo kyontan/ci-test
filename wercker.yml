@@ -23,10 +23,10 @@ build:
           node --version
           n use $(n --stable) --version
           npm install
-    - script:
-        name: bower install
-        code: |
-          $(npm bin)/bower --allow-root install
+    # - script:
+    #     name: bower install
+    #     code: |
+    #       $(npm bin)/bower --allow-root install
     # - script:
     #     name: gulp build
     #     code: |
